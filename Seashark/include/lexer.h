@@ -4,15 +4,18 @@
 
 enum class TokenType {
     PRINT, IDENT, NUMBER, STRING,
-    LPAREN, RPAREN, EQUAL, PLUS, MINUS, STAR, SLASH,
-    END, UNKNOWN
+    LET, FUNC,
+    LPAREN, RPAREN, LBRACE, RBRACE, COMMA,
+    EQUAL, PLUS, MINUS, STAR, SLASH,
+    IF, ELSE, WHILE, RETURN,
+    SEMICOLON, END, UNKNOWN
 };
 
 struct Token {
     TokenType type;
     std::string value;
+    int line;
 };
-
 class Lexer {
 public:
     Lexer(const std::string &src);
@@ -20,8 +23,11 @@ public:
 private:
     std::string src;
     size_t pos;
+    int line;
     char peek();
     char advance();
     void skipWhitespace();
+    Token makeIdent();
+    Token makeNumber();
+    Token makeString();
 };
-
