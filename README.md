@@ -1,13 +1,11 @@
-# Seashark
+# 🦈 Seashark Language
 
-Seashark — a tiny independent programming language prototype (interpreter) written in C++.
+**Seashark** is a brand new programming language prototype — built from scratch in C++.  
+It is designed to be **fast, simple, and extensible**, with the long-term vision of powering **websites, apps, and games**.
 
-## Build
-Requires CMake and a C++17 compiler (g++/clang++).
+Currently, Seashark runs as an **interpreter**, but the plan is to evolve into a full **compiler** (to native and WebAssembly).
 
-```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
-# produces ./seashark
+---
+
+## 📂 Project Layout
+
