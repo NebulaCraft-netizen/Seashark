@@ -1,5 +1,5 @@
-// Typewriter effect for index.html
-function typewriter(elementId, text, speed = 80) {
+// Typewriter effect
+function typewriter(elementId, text, speed = 70) {
   let i = 0;
   function typing() {
     if (i < text.length) {
@@ -11,7 +11,7 @@ function typewriter(elementId, text, speed = 80) {
   typing();
 }
 
-// Copy to clipboard for code blocks
+// Copy buttons
 function addCopyButtons() {
   document.querySelectorAll("pre").forEach(block => {
     const btn = document.createElement("button");
@@ -28,8 +28,7 @@ function addCopyButtons() {
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("typewriter-text")) {
-    typewriter("typewriter-text", "Seashark is a fast and beginner-friendly programming language 🦈");
+    typewriter("typewriter-text", "Seashark: Fast, Simple, and Powerful 🦈");
   }
   addCopyButtons();
 });
-
